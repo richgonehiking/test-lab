@@ -1,0 +1,165 @@
+/* variables */
+
+:root {
+  --fontMain: 'Poppins', sans-serif;
+  --colorAccent: #97a7ae;
+  --colorAccentDark: #70868f;
+  --colorAccentLight: #eef0f2;
+}
+
+/* base styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--fontMain);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 150%;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  padding-bottom: 2vh;
+}
+
+ul {
+  margin-top: 2vh;
+  padding-top: 5vh;
+  padding-left: 4vh;
+  list-style-type: square;
+}
+
+li {
+  font-size: 1rem;
+  padding-left: 0.5vh;
+}
+
+.linkViewMore {
+  display: inline-block;
+  padding: 0.8vh 1.25vh;
+  margin-top: 4vh;
+  border-radius: 1vh 1vh 2.5vh 1vh;
+  border-left: 1px solid var(--colorAccent);
+  border-top: 1px solid var(--colorAccent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  background-color: var(--colorAccentDark);
+  color: var(--colorAccentLight);
+}
+.linkViewMore:after {
+  content: '...';
+}
+
+body {
+  background-color: black;
+}
+
+/* Main Menu */
+
+nav {
+  position: fixed;
+  width: 100vw;
+
+  z-index: 10;
+}
+
+#menu {
+  display: none;
+}
+
+.menuToggle {
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+  display: block;
+  background-color: var(--colorAccent);
+  border-bottom: 1px solid var(--colorAccentDark);
+  box-shadow: 2vh 0px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 2vh 5vh;
+  z-index: 10;
+}
+
+.menuToggle img {
+  height: 90%;
+}
+
+.mainNav {
+  position: relative;
+  overflow: hidden;
+  top: 8vh; /* Dependent upon menuToggle height */
+  width: 100vw;
+  height: 0px;
+  background-color: var(--colorAccent);
+  box-shadow: 2vh 0px 4px rgba(0, 0, 0, 1);
+  z-index: 1;
+  transition: height 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+#menu:checked ~ .mainNav {
+  height: calc(5 * (1.1rem + 1px + 1.5vh + 1.5vh));
+}
+
+.mainNav {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.mainNav > li > a {
+  display: block;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  padding: 1.5vh 4vh;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  top: calc(1px + 4vh + 3.5vh);
+  background: url(assets/bgCloudForest.jpg);
+  background-size: 120%;
+  background-position: bottom;
+}
+
+.mainLogo {
+  width: 80vw;
+  filter: drop-shadow(10px 0px 2px rgba(0, 0, 0, 0.35));
+}
+
+/* Main */
+
+main {
+  margin: 5vh 0;
+}
+
+.heroDesc {
+  background-color: black;
+  margin: 5vh 5vh;
+}
+
+.heroDesc h1 {
+  color: var(--colorAccentLight);
+}
+
+.heroDesc p,
+.heroDesc li {
+  color: var(--colorAccentLight);
+}
+
+.heroDesc ul {
+  border-top: 1px solid var(--colorAccentDark);
+}

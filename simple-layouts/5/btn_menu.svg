@@ -1,0 +1,15 @@
+<svg
+  width="42"
+  height="42"
+  viewBox="0 0 42 42"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+<rect x="0.5" y="0.5" width="41" height="41" fill="#D8DCD5" stroke="#666666" />
+<path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M9 10H32.2759V9H9V10ZM9 33.2759H32.2759V32.2759H9V33.2759ZM32.2759 25.5172H9V24.5172H32.2759V25.5172ZM9 17.7586H32.2759V16.7586H9V17.7586Z"
+    fill="#666666"
+  />
+</svg>

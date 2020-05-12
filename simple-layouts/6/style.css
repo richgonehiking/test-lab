@@ -1,0 +1,109 @@
+/* Variables */
+
+:root {
+  --typeMain: 'Roboto', sans-serif;
+  --typeReg: sans-serif;
+
+  --colorMain: #465975;
+  --colorAccentBright: #ffa337;
+
+  --shadowMain: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.15),
+    0px 8px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Base styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: ;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url(./assets/bg.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.bodyWrapper {
+  /* background-color: lightgrey; */
+  height: 100vh;
+  width: 80vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* nav styles */
+nav {
+  /* width: 80vw; */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+}
+nav > ul:before {
+  content: '';
+  position: absolute;
+  height: 1.25vh;
+  width: 40vw;
+  min-width: 400px;
+  max-width: 600px;
+  margin-right: 10vw;
+  border-bottom-left-radius: 0.5vh;
+  background-color: var(--colorAccentBright);
+  box-shadow: var(--shadowMain);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+nav li {
+  margin-left: 4px;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  padding: 4.8vh 2.25vw 1.2vh;
+  border-bottom-right-radius: 0.5vh;
+  border-bottom-left-radius: 0.5vh;
+  color: var(--colorMain);
+  font-family: var(--typeMain);
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: padding-top 0.1s ease-in-out;
+  /* background-color: var(--colorAccentBright); */
+}
+
+nav a#active {
+  padding-top: 5.5vh;
+  background-color: white;
+  box-shadow: var(--shadowMain);
+  font-weight: 600;
+}
+
+nav a:hover {
+  padding-top: 5vh;
+  background-color: white;
+  box-shadow: var(--shadowMain);
+  font-weight: 400;
+}
+
+/* header styles    */
+
+header a img {
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15))
+    drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.05));
+  transition: filter 0.2s ease-in-out;
+}
+
+header a img:hover {
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35))
+    drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.05));
+}

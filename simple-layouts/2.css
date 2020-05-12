@@ -1,0 +1,151 @@
+/* Variables */
+
+:root {
+  --main: #212638;
+  --accent: #746e8c;
+  --accentLight: #fff5cb;
+  --txtPlain: 'Open Sans', sans-serif;
+  --txtMain: 'Offside', sans-serif;
+}
+/* Base Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: var(--txtPlain);
+}
+
+body {
+  background-color: var(--main);
+}
+
+/* menu toggle */
+
+#menu {
+  display: none;
+}
+.menuToggle {
+  margin-top: 0.45em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.menuToggle svg {
+  height: 1em;
+  fill: var(--accentLight);
+  transition: transform 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.menuToggle:hover svg {
+  transform: scale(1.25);
+}
+
+#menu:checked ~ .menuToggle svg {
+  fill: var(--accent);
+  transform: translateY(15px) rotate(135deg) scale(1.25);
+}
+
+/* Main Nav Menu */
+
+nav {
+  position: fixed;
+  bottom: 0;
+  height: 1.6em;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--accent);
+  border-top: 2px solid #8880a5;
+  box-shadow: 0px -8px 12px rgba(0, 0, 0, 0.45);
+  transition: height 0.25s ease-in-out;
+}
+
+#menu:checked ~ nav {
+  height: 10.75em;
+}
+
+.navMain {
+  padding-bottom: 0.75em;
+}
+
+.navMain label {
+  cursor: pointer;
+}
+
+.navMain li {
+  list-style: none;
+  text-align: center;
+}
+
+.navMainToggle {
+  display: block;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in-out, scale 0.5s ease-in-out;
+}
+
+.navMainToggle:hover {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.navMainToggle svg {
+  height: 1.35em;
+  color: var(--main);
+  transition: transform 0.5s ease-in-out;
+}
+
+.navMain a {
+  font-family: var(--txtMain);
+  font-size: 1.25em;
+  line-height: 1.55em;
+  color: var(--main);
+  display: block;
+}
+
+.navMain a:hover {
+  color: var(--accentLight);
+}
+
+/* Main Content */
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+  margin-bottom: 1.5em;
+}
+
+.logo img {
+  width: 10em;
+}
+main {
+  margin: 0 1.75em 3.25em;
+}
+
+main h2 {
+  font-family: var(--txtMain);
+  color: var(--accent);
+  font-size: 1.25em;
+  line-height: 1.45em;
+  margin-bottom: 0.75em;
+}
+
+main p {
+  color: #eaeaea;
+  font-size: 0.95em;
+  line-height: 1.6em;
+}
+
+.credit {
+  margin: 1em 0 0.5em;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+}
+
+.credit a {
+  color: #999;
+  text-decoration: underline;
+}

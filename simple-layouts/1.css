@@ -1,0 +1,117 @@
+/* 
+
+Fonts
+
+font-family: 'Quicksand', sans-serif;
+
+ */
+
+/* 
+ 
+ Variables
+
+ */
+
+:root {
+  --main: #5a7c83;
+  --link: rgba(87, 96, 111, 1);
+  --link-hover: rgba(255, 107, 129, 1);
+  --accent: #c4b6a9;
+  --accentDark: #192a2e;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* 
+ 
+ Reset
+ 
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #5a7c83;
+  background-color: var(--accentDark);
+}
+
+.navToggle {
+  width: 1em;
+  margin: 0.75em 0 0.5em 0.5em;
+}
+
+nav input {
+  display: none;
+}
+
+input:checked ~ .navBar {
+  display: block;
+}
+
+.navBar {
+  display: none;
+}
+
+.navLink {
+  display: flex;
+  padding: 0.5em 1em 0.5em 0.5em;
+  align-items: center;
+  background-color: var(--main);
+}
+
+.navIcon {
+  width: 1.75em;
+  margin-right: 0.5em;
+}
+
+.navLink a {
+  color: var(--accentDark);
+}
+
+.navLink a:hover {
+  color: var(--accent);
+}
+
+.logo {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo svg {
+  width: 4em;
+  height: auto;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--main);
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 0.85em;
+  margin-top: 0.1em;
+}
+.textCafe {
+  color: var(--accent);
+  font-size: 0.75em;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    /* font-size: 30px; */
+  }
+}

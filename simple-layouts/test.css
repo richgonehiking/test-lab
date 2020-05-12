@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.collapsible-menu label {
+  font-size: 56px;
+  display: block;
+  cursor: pointer;
+  background-size: 100px;
+  background: url(./1/icon-blog.svg) no-repeat left center;
+  padding: 10px 0 10px 50px;
+}
+
+input:checked + label {
+  background-image: url(./1/icon-shop.svg);
+}
+
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+input:checked ~ .menu-content {
+  max-height: 100%;
+}
