@@ -182,13 +182,13 @@ nav {
   align-items: center;
   padding: 2rem;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  transform: translatex(-100vw);
   transition: transform 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
   /* display: none; */
 }
 
 #menu:checked ~ .menuMain {
-  /* display: block; */
-  transform: translatex(-100vw);
+  transform: translatex(0vw);
 }
 
 .menuMain a {
