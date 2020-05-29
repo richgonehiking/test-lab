@@ -111,8 +111,8 @@ nav > input {
   bottom: -2rem;
   right: -2rem;
   background: rgb(74, 169, 233);
-  box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.15),
-    -6px 6px 20px 6px rgba(0, 0, 0, 0.15), -1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.15),
+    -6px -2px 20px 0px rgba(0, 0, 0, 0.15), -1px -1px 0px rgba(0, 0, 0, 0.2);
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
   cursor: pointer;
@@ -128,22 +128,24 @@ nav > input {
 }
 
 #menuToggle:active {
-  transform: scale(0.9);
-  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.1),
-    -3px 3px 10px 10px rgba(0, 0, 0, 0.05), -1px 1px 1px rgba(0, 0, 0, 0.4);
+  transform: scale(0.8);
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.1),
+    -3px -3px 10px 10px rgba(0, 0, 0, 0.05), -1px -1px 1px rgba(0, 0, 0, 0.4);
 }
 
 #mainMenu {
   position: fixed;
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   top: 100vh;
   transition: top 1s cubic-bezier(0.8, 0, 0.1, 1);
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2), 0 -6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.15),
+    -6px -2px 20px 0px rgba(0, 0, 0, 0.15), -1px -1px 0px rgba(0, 0, 0, 0.2);
   background-color: rgb(204, 204, 204);
+  /* padding-bottom: 2rem; */
 }
 
 #mainMenu a {
@@ -167,13 +169,17 @@ nav > input {
 #mainMenu a:nth-of-type(3) {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  border-bottom: none;
+  padding-bottom: 2rem;
 }
 
 #mainMenu a:nth-of-type(4) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  border-bottom: none;
+  padding-bottom: 2rem;
 }
 
 #menuOpen:checked ~ #mainMenu {
-  top: 20vh;
+  top: 40vh;
 }
