@@ -126,9 +126,9 @@ section {
   bottom: 0;
   right: 0;
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
-  -webkit-background-clip: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
   background-color: #fff;
-  background-color: red;
+  background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
