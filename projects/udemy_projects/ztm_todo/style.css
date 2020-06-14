@@ -1,0 +1,178 @@
+/* Variables */
+
+:root {
+    --colorAccent: rgba(18, 171, 219, 1);
+    --colorAccentAlt: rgba(72, 72, 117, 1);
+    --colorLight: rgba(234, 252, 249, 1);
+    --colorLightAlt: rgba(255, 255, 255, 1);
+    --colorLightAccent: rgba(72, 72, 117, 0.1);
+    --fontMain: 'Roboto Slab', serif;
+    --fontPlain: 'Roboto', sans-serif;
+    --shadowMain: 0px 4px 20px rgba(0, 0, 0, 0.3), 0px 2px 10px rgba(0, 0, 0, 0.1);
+    --shadowLight: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontPlain);
+    text-decoration: none;
+}
+
+body {
+    background: radial-gradient(60% 60% at 50% 5%, #254651 0%, #0E181C 100%);
+    background-attachment: fixed;
+    color: var(--colorAccent);
+}
+
+#wrapper {
+    width: 70vw;
+    max-width: 600px;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+
+header {
+    border-radius: .3rem;
+    background-color: var(--colorAccentAlt);
+    box-shadow: var(--shadowMain);
+    margin-top: 5vh;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: .75rem;
+    padding-left: 1.5rem;
+}
+
+header>h1 {
+    font-family: var(--fontMain);
+    font-weight: 400;
+    font-size: 2.25rem;
+    letter-spacing: .05rem;
+    color: var(--colorLight);
+    background-image: url(./assets/icnCheckBox.svg);
+    background-repeat: no-repeat;
+    background-position: left 60%;
+    background-size: 1.5rem;
+    padding-left: 2.1rem;
+}
+
+/* Main Styles */
+
+main {
+    border-radius: .3rem;
+    background-color: var(--colorLight);
+    box-shadow: var(--shadowMain);
+    margin-top: 1.5rem;
+    padding-top: .25rem;
+    padding-bottom: 1.5rem;
+
+}
+
+#addListItem {
+    /* border-radius: .3rem; */
+    width: calc(100% - 3rem);
+    max-width: 600px;
+    min-width: 250px;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+#addListItem>input {
+    background-color: var(--colorLight);
+    height: 2.25rem;
+    /* width: 80%; */
+    font-size: 1.15rem;
+    font-family: var(--fontMain);
+    font-weight: 400;
+    padding: 1.25rem .75rem 1rem;
+    border: 1px solid var(--colorAccentAlt);
+    border-bottom-left-radius: .3rem;
+    border-top-left-radius: .3rem;
+    box-shadow: var(--shadowLight);
+    flex-grow: 1;
+
+}
+
+#addListItem>input::placeholder,
+#addListItem>input::-moz-placeholder {
+    color: rgba(72, 72, 117, .65);
+    font-weight: 300;
+}
+
+#addListItem>button {
+    color: var(--colorAccent);
+    font-size: 1.5rem;
+    border: none;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    flex-basis: 10%;
+    background-color: var(--colorAccentAlt);
+    box-shadow: var(--shadowLight);
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out, font-size 50ms ease-in-out;
+}
+
+#addListItem>button:hover {
+    background-color: rgb(36, 36, 59);
+    font-size: 1.65rem;
+}
+
+main>#toDoList {
+    list-style-type: none;
+    width: 100%;
+}
+
+main>#toDoList>section {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-size: 1.2rem;
+    letter-spacing: .02rem;
+    line-height: 165%;
+    font-weight: 300;
+    color: var(--colorAccentAlt);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#toDoList>section>p {
+    flex-grow: 1;
+    margin-left: 2.25rem;
+    word-break: break-all;
+}
+
+#toDoList>section>button {
+    color: #cccccc;
+    border: none;
+    font-size: 1.5rem;
+    background-color: unset;
+    flex-grow: 0;
+    padding: .75rem;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: transform 50ms ease-in-out;
+}
+
+#toDoList>section>button:hover {
+    color: rgb(236, 112, 112);
+    transform-origin: 50%;
+    transform: scale(1.1);
+}
+
+
+main>#toDoList>section:nth-of-type(2n-1) {
+    background-color: var(--colorLightAlt);
+    border-top: 1px dashed var(--colorLightAccent);
+    border-bottom: 1px dashed var(--colorLightAccent);
+
+}
